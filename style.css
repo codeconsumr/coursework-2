@@ -1,0 +1,651 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&family=Playfair+Display:wght@400;500;700;800&display=swap');
+@import url('db.onlinewebfonts.com/c/96a428d27e65301dec4e4aeb424856a1?family=Xenois+Serif');
+
+/*line 5 - line 10 taken from: https://www.w3schools.com/html/html_responsive.asp */
+@media (max-width: 800px) {
+    .flex_container, .button_container table{
+        flex-direction: column;
+    }
+  }
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', 'Noto Serif JP', sans-serif;
+}
+
+:root{ /* variables */
+    --transparent: rgba(0,0,0,0.6)
+    --primarycolour: rgb(1,1,1)
+}
+
+/*general*/
+
+body{
+    height: 100%;
+}
+
+a {
+    color: #000;
+    color: inherit;
+}
+
+.hyperlink{
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+}
+
+.hyperlink:hover{
+    text-decoration: underline;
+}
+
+.black_bg{
+    background-color: black;
+}
+
+
+.container{
+    background-image: url("https://luca.restaurant/wp-content/themes/luca-v2/assets/img/global-bg.jpg");
+    background-attachment: fixed;
+    width: 100%;
+}
+
+.flex-container{
+    flex-direction: row;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    margin-top: 4em;
+}
+.header img{
+    width:40% ;
+}
+
+.paragraph{
+    font-size:x-large;
+    display: flex;
+    justify-content: center;
+    padding: 3em 5em 2em 5em;
+    text-align: center;
+    flex-direction: column;
+}
+
+.subtitle{
+    text-align: center;
+    margin-bottom: 1em;
+    margin: 1em;
+    color: inherit;
+    text-decoration: underline;
+    /* following line of code is from: https://developer.mozilla.org/en-US/docs/Web/CSS/text-underline-offset */
+    text-underline-offset: 30%;
+}
+
+.container-padding{
+    padding: 4rem 2rem;
+}
+
+.container-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.button_single  button{
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0.5em 1em 0.5em 1em;
+    font-size: large;
+    text-transform: uppercase;
+    border: 1px solid;
+    margin: auto;
+    margin-bottom: 2em;
+    transition: 0.5s;
+    color: inherit;
+    border-color: inherit;
+    flex-direction: row ;
+}
+
+.button_single>button:hover{
+    background-color: white;
+    transition: 0.5s;
+    color: black;
+}
+
+.space_remover{ /* removes space that appears when header class is added to non-flex containers*/
+    display: flex;
+}
+/* Welcome Page Background */
+/* Code reference: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_auto */
+
+.mySlides_auto {display: none;}
+
+/* Slideshow container */
+.welcome_page_background {
+    width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.active_auto {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade_auto {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade_auto {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+/*Welcome Page*/
+
+.welcome_page{
+    display: flex;  
+    background-image: url(images/Indoor_dining3_pic.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.welcome_page > *{
+    font-size: large;
+}
+
+
+.content_container{
+    padding: 2em;
+    width: 100%;
+}
+
+.welcome_page img{
+    object-fit: conta
+}
+
+
+#navbar{
+    position: fixed;
+    color: white;
+    margin-top: 0.5em;
+    /* from w3 schools for navbar hiding
+       link: https://www.w3schools.com/howto/howto_js_navbar_hide_scroll.asp */
+    top: 25px; /* changed top: 0; to top: 25px; */
+    transition: top 0.5s; /* changed transition: top 0.3s; to transition: top 0.3s; */
+}
+
+#navbar a{
+    padding: 5px;
+}
+
+.reservations_nav{
+    background-color: white;
+    padding: 0.5em;
+    margin-right: 1em;
+    color: black;
+    text-decoration: none;
+}
+
+
+#reservations_nav a:link{
+    color: black;
+}
+
+#logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    width: 100vh;
+    width: 100%;
+    height: 100%;
+}
+
+#logo img{
+    width: 29%;
+}
+
+.content_container img{
+    top: 50%;
+    left: 50%;
+    width: 50%;
+}
+
+.instagram_link{
+    position: absolute;
+    bottom: 30px ;
+    left: 25px;
+    color: white;
+    font-size: 2vh
+}
+
+.welcome_contact{
+    color: white;
+    position: absolute;
+    bottom: 30px;
+    right: 25px;
+    font-size: 2vh;
+}
+
+/* text section */
+
+.text_section{
+    display: flex;
+    min-height: 50vh;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.text_section h2{
+    margin: auto;
+}
+
+
+/* Restaurant Section */
+
+#restaurant_flex_container{
+    display: flex;
+    background-color: rgba(255  , 115, 91, 0.6);
+    min-height: 100vh;
+}
+
+.restaurant_info{
+    flex: 50%;
+}
+
+.restaurant_image{
+    flex: 50%;
+}
+.restaurant_image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/*Christmas Section */
+
+#christmas_flex_container{
+    display: flex;
+    background-color: rgba(255, 68, 4, 0.7);
+    min-height: 100vh;
+}
+
+.christmas_image{
+    flex: 1;
+}
+
+.christmas_image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.christmas_info{
+    flex: 1;
+}
+
+/* Luca Bar Section */
+
+#LucaBar_flex_container{
+    display: flex;
+    min-height: 100vh;
+    background-color: rgba(212, 188, 164, 0.5);
+}
+
+.LucaBar_info{
+    background-color: rgba(212, 188, 164, 0.5);
+    flex: 1;
+}
+
+.LucaBar_image{
+    background: pink;
+    flex: 1;
+}
+
+.LucaBar_image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Image Slider */
+
+.image_slider{
+    display: flex;
+    flex-direction: column; /* added by me */
+    background: cadetblue;
+    min-height: 130vh;
+    width: 100%;
+}
+
+/* line 292 - 383 code refenence: https://www.w3schools.com/howto/howto_js_slideshow.asp */
+
+
+/* Slideshow container */
+.slideshow-container {
+    min-height: 100vh;
+    position: relative;
+    margin: auto;
+    width: 100%;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+/*my code - dot-container */
+
+.dot-container{
+    text-align: center;
+    margin-top: -50px;
+    z-index: 1;
+}
+
+/* Private Dining Section */
+
+#private_dining_flex_container{
+    background-color: rgba(212, 188, 164, 0.5);
+    display: flex;
+    min-height: 100vh;
+}
+
+.private_dining_image{
+    background: grey;
+    flex: 1;
+}
+
+.private_dining_image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.private_dining_info{
+    background-color: rgba(212, 188, 164, 0.5);
+    flex: 1;
+}
+
+/* Gifts and Experinces Section*/
+
+#gifts_experience_flex_container{
+    display: flex;
+    min-height: 75vh;
+}
+
+.gifts_experience_info{
+    background: rgba(221, 218, 74, 0.7);
+    flex: 1;
+}
+
+.gifts_experience_image{
+    background: honeydew;
+    flex: 1;
+}
+
+.gifts_experience_image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* reservations section */
+
+#reservations_container{
+    min-height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 100, 0.5);
+}
+
+#reservations_button button{
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0.5em 1em 0.5em 1em;
+    font-size: large;
+    text-transform: uppercase;
+    border: 1px solid;
+    margin: auto;
+    margin-bottom: 2em;
+    transition: 0.5s;
+    flex-direction: row ;
+}
+
+#reservations_button>button:hover{
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    transition: 0.5s;
+}
+
+/* menus section */
+
+#menu_container{
+    min-height: 115vh;
+    background-color: rgba(170, 108, 5, 0.6);
+    width: 100%;
+}
+
+
+#menu_button_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#menu_button_container table,tr,td{
+    padding: 0.5em;
+    margin-bottom: 2em;
+}
+
+.clear-button-hover{
+    width: 100%;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-size: x-large;
+    text-transform: uppercase;
+    background-color: white;
+    mix-blend-mode: screen;
+/* "mix-blend-mode: screen" - https://codepen.io/KristinB/details/WYrOQm */
+
+}
+
+.clear-button-hover:hover{   
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    transition: 0.5s;
+}
+
+/* Press and Acolades Section */
+
+.press_acolades_container{
+    min-height: 115vh;
+    width: 100%;
+    background-color: rgba(30, 161, 161, 0.65);
+}
+
+.press-logo{
+    width: 20px;
+    height: 20px;
+    transform: scale(.5);
+    padding-left: 15rem;
+}
+
+/* Hours & Location Section */
+
+.hours_location_flex_container{
+    min-height: 100vh;
+    display: flex;
+    background-color: #4d708e;
+    color:white;
+}
+
+.hours_location_info{
+    flex: 50%;
+    background-color: #4d708e;
+}
+
+.hours_location_iframe{
+    flex: 50%;
+}
+
+.hours_location_iframe iframe{
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+    border: none;
+}
+
+.hours_location_flex_container p{
+    text-align: center;
+    margin: 3em;
+}
+
+/* contact section */
+
+#contact_container{
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(233, 227, 164, 1);
+}
+
+.input_container{
+    display: flex;
+    flex-direction: column;
+    margin: -1em 6em ;
+    color: black;
+}
+
+.input_container input{
+    background-color: transparent;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #000;
+    color: black;
+}
+
+.input_container>input::placeholder{
+    color: black;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.input_container>input:focus{
+    border: 1px solid transparent;
+}
+
+#contact_button button{
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0.5em 1em 0.5em 1em;
+    font-size: large;
+    text-transform: uppercase;
+    border: 1px solid;
+    margin: auto;
+    margin-bottom: 2em;
+    transition: 0.5s;
+    color: inherit;
+    border-color: inherit;
+    flex-direction: row ;
+    border-radius: 17px;
+}
+
+#contact_button>button:hover{
+    background-color: rgb(255,255,200,255);
+    transition: 0.5s;
+    color: black;
+}
+
